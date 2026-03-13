@@ -1,0 +1,79 @@
+.card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.6rem;
+  transition: border-color 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+.priority {
+  width: 3px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.body { flex: 1; min-width: 0; }
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.priorityBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.due {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.assignee {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #000;
+  margin-left: auto;
+}
+
+.dragHandle {
+  color: var(--border);
+  font-size: 1rem;
+  cursor: grab;
+  padding: 0 0.1rem;
+  flex-shrink: 0;
+  align-self: center;
+  transition: color 0.2s;
+}
+.card:hover .dragHandle { color: var(--muted); }
+.card[draggable="true"] { cursor: grab; }

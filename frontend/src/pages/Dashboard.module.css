@@ -1,0 +1,162 @@
+.page { min-height: 100vh; background: var(--bg); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navLogo { font-size: 1.1rem; font-weight: 700; color: var(--accent-h); }
+
+.navRight { display: flex; align-items: center; gap: 0.75rem; }
+
+.avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: #000;
+}
+
+.userName { font-size: 0.9rem; color: var(--text); }
+
+.logoutBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.logoutBtn:hover { border-color: var(--danger); color: var(--danger); }
+
+.main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.title { font-size: 1.75rem; font-weight: 700; }
+.sub   { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.newBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.newBtn:hover { background: var(--accent-h); }
+
+.loading { color: var(--muted); text-align: center; padding: 3rem; }
+
+.empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--muted);
+}
+.emptyIcon { font-size: 3rem; margin-bottom: 1rem; }
+.empty h3  { font-size: 1.25rem; color: var(--text); margin-bottom: 0.5rem; }
+.empty p   { margin-bottom: 1.5rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+.cardIcon {
+  width: 44px; height: 44px;
+  background: var(--accent);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.cardBody { flex: 1; }
+.cardName { font-weight: 600; margin-bottom: 0.25rem; }
+.cardDesc { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+.cardMeta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--muted); }
+
+.cardArrow { color: var(--muted); font-size: 1.2rem; align-self: center; }
+
+/* Modal */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+.modal h2 { font-size: 1.25rem; margin-bottom: 1.5rem; }
+
+.field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.field label { font-size: 0.85rem; font-weight: 500; }
+.field input {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  color: var(--text);
+  outline: none;
+}
+.field input:focus { border-color: var(--accent); }
+.field input::placeholder { color: var(--muted); }
+
+.modalActions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem; }
+
+.cancelBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.createBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.createBtn:disabled { opacity: 0.6; cursor: not-allowed; }
